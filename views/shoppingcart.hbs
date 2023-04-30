@@ -1,0 +1,51 @@
+{{#if userCart}}
+<div style="padding-top: 30px;">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr class="table-active">
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-center">Product Name</th>
+                <th scope="col" class="text-center">Product Quantity</th>
+                <th scope="col" class="text-center">Product Price</th>
+                <th scope="col" class="text-center">Delete Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each userCart.selectedProduct as |val index| }}
+            <tr>
+                <th scope="row" class="text-center">{{add @index}}</th>
+                <td class="text-center">
+                    {{val.name}}
+                </td>
+                <td class="text-center">
+                    {{!-- checkQuantity : is function in app.js helper --}}
+                    {{#if (checkQuantity @val.quantity) }}
+                    <a href="#" class="btn btn-secondary btn-sm disabled" style="margin-right:30px ;"><i
+                            class="fa-solid fa-circle-minus"></i></a>
+                    {{else}}
+                    <a href="/decreaseProduct/{{index}}" class="btn btn-secondary btn-sm" style="margin-right:30px ;"><i
+                            class="fa-solid fa-circle-minus"></i></a>
+                    {{/if}}
+                    {{val.quantity}}
+                    <a href="/increaseProduct/{{index}}" class="btn btn-secondary btn-sm" style=" margin-left:30px ;"><i
+                            class="fa-solid fa-circle-plus"></i></a>
+                </td>
+                <td class="text-center">EGP {{val.price}}</td>
+                <td class="text-center"><a href="/deleteProduct/{{index}}" class="btn btn-danger btn-sm"
+                        onclick="confirmMsg()"> <i class="fa-sharp fa-solid fa-trash"></i></a></td>
+            </tr>
+            {{/each}}
+            <tr class="table-active">
+                <td colspan="3" style="font-weight: bold;">Total Price</td>
+                <td style="font-weight: bold;" class="text-center">EGP {{userCart.totalPrice}}</td>
+                <td class="text-center"><a href="/deleteAllProduct" class="btn btn-danger btn-sm">Delete All <i
+                            class="fa-sharp fa-solid fa-trash"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center"><a href="/checkout" class="btn btn-primary" style="width: 200px;">Check Out </a></div>
+
+{{else}}
+<h1 class="empty-cart">Your Shopping Cart Is Empty</h1>
+{{/if}}

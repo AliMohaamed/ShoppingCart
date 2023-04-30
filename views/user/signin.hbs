@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-4 " style="padding: 80px;">
+    <h5 class="text-center">Log in</h5>
+        {{!-- {{#each messages }} 
+        {{!-- <div class="alert alert-danger" role="alert"> --}}
+            {{!-- {{!-- <p>{{this}}</p>  --}}
+        {{!-- </div> --}}
+    {{!-- {{!-- {{/each}}  --}}
+
+    {{#if messages}}
+        <div class="alert alert-danger" role="alert">
+            <p>{{messages}}</p>
+        </div>
+    {{/if}}
+    <br>
+    <form action="signin" method="post">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your Email" class="form-control" >
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Enter your Password" class="form-control">
+        </div>
+        <br> 
+        <input type="hidden" name="_csrf" value="{{token}}">
+        <button type="submit" class="btn btn-outline-success">Sign in</button>
+        <br>
+        <br>
+        <a href="/users/signup" style="text-decoration: none;" class="text-primary">Create account</a>
+    </form>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "shopping-cart",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "bcrypt": "^5.1.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "csrf": "^3.1.0",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.0",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "joi": "^17.9.2",
+    "moment": "^2.29.4",
+    "moment-range": "^4.0.2",
+    "mongoose": "^7.0.3",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "stripe": "^12.3.0"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.7"
+  }
+}

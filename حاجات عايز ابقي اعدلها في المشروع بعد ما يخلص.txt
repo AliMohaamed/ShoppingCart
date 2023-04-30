@@ -1,0 +1,14 @@
+1- اول حاجه وهي اليوزر في المنجوز عايز ابقي اخش علي اللينك دا واظبط الايميل
+https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax
+2-(validation in bootstrap in form ) to user
+3- Passport facebook and google gmail (in login)(https://www.passportjs.org/packages/)
+4- عايز في الاخر ابقي ابقي ان الايرورز مش كلها تطلع مع بعض وان اطلع علي القد بس ودي اقدر اظبطها ب ان لو الايميل فاضي اعمل كونديشن وكدا واظبطها يعني وهكذا وتتعمل ف اللوكين والسين ان
+5-لما يجي يسجل بالجيميل يبعتله رساله عليها
+6- رساله تأكيديه لما يجي يمسح منتج او حاجه
+7- الزرار بتاع البلس والمينص عايز اعملهم ريسبونس
+8- عايز اعمل روتر للشوبينج كارت يكون بتاعه هو
+9- تظبيط فورم الشيك اوت(https://www.youtube.com/watch?v=G7_VTWnWz40)
+9- expression date
+
+
+

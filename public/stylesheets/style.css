@@ -1,0 +1,118 @@
+/* Fonts */
+@font-face {
+    font-family: myFont;
+    src: url(/Fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url(/Fonts/RubikMonoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(/Fonts/UnicaOne-Regular.ttf);
+}
+
+/* @font-face {
+    font-family: fontCairo;
+    src: url(/Fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+} */
+
+@font-face {
+    font-family: fontBangers;
+    src: url(/Fonts/Bangers/Bangers-Regular.ttf);
+}
+
+@font-face {
+    font-family: fontBlack;
+    src: url(/Fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+}
+
+@font-face {
+    font-family: myfont3;
+    src: url(/Fonts/Rubik_Spray_Paint/RubikSprayPaint-Regular.ttf);
+}
+
+@font-face {
+    font-family: myfont4;
+    src: url(/Fonts/Darker_Grotesque/DarkerGrotesque-Regular.ttf);
+}
+
+@font-face {
+    font-family: myfont5;
+    src: url(/Fonts/Fonts/Bayon-Regular.ttf);
+}
+
+/* End Fonts */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* .container {
+    padding-top: 20px;
+} */
+
+.card img {
+    max-width: 50%;
+    max-height: 5 0%;
+    padding-top: 10px;
+}
+
+.card .card-title {
+    font-family: fontCairo;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card .card-text {
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.price {
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    /* padding: 8px; */
+}
+
+/* .row{
+    padding: 30px;
+} */
+.empty-cart {
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: myfont3;
+    background: -webkit-linear-gradient(#020024, #090979, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+

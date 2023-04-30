@@ -1,0 +1,188 @@
+{{!-- [(row1) [ {} {} {} ] , (row2)[ {} {} {} ] ] --}}
+{{!-- for loop --}}
+{{#if successMsg}}
+    <div class="alert alert-success text-center">
+        {{successMsg}} <i class="fa-solid fa-face-smile-wink"></i>
+    </div>
+{{/if}}
+{{#each products}}
+
+<div class="row">
+    {{#each this}}
+    <div class="col-lg-4  col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="{{this.imagePath}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{this.productName}}</h5>
+                <p class="card-text">
+                    Storage Capacity : {{this.information.storageCapacity}}G <br>
+                    Number Of Sim : {{this.information.numberOfSIM}} <br>
+                    Rear Camera Resolution : {{this.information.cameraResolution}}MP <br>
+                    Display Size(Inch) : {{this.information.displaySize}} inch <br>
+                <div>
+                    <div class="price float-start">EGP {{this.price}}</div>
+                    {{#if ../../checkUser}} {{!-- up to 2 level --}}
+                    <a href="/addtocart/{{this._id}}/{{this.price}}/{{this.productName}}"
+                        class="btn btn-outline-danger float-end ">Add To Cart</a>
+                    {{else}}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger float-end" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Add To Cart
+                    </button>
+                    {{/if}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex align-items-center">
+        <div class="modal-content" style="height: 100%;">
+            <div class="modal-header">
+                {{!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> --}}
+                <i class="fa-sharp fa-solid fa-hand"></i>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You must Sign in to purchase </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/users/signin" class="btn btn-success">Sign in</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{!-- <div class="row p-3">
+    <div class="col-lg-4  col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="col-lg-4 col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+        <div class="card">
+            <div class="text-center">
+                <img src="/images/26be56634ad9773c9d8f6315cac2cba7.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Apple iPhone 14</h5>
+                <p class="card-text">
+                    Storage Capacity : 1TB <br>
+                    Number Of Sim : Dual SIM <br>
+                    Rear Camera Resolution : 16MP<br>
+                    Display Size(Inch) : 6.7‑inch <br>
+                <div>
+                    <div class="price float-start">EGP 46772</div>
+                    <a href="#" class="btn btn-outline-danger float-end ">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
